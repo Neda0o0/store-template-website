@@ -1,0 +1,57 @@
+import { Armchair, Check, Info } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <div>
+      {/* navbar top */}
+      <div className="navbar_top flex items-center justify-center bg-[#272343] w-full h-[45px]">
+        <div className="lg:container flex justify-between items-center">
+          <p className="flex items-center gap-2 text-sm font-inter font-normal text-white capitalize">
+            <Check />
+            Free on all orders over $50
+          </p>
+          <div className="navbar_top_right flex items-center gap-6">
+            <select
+              defaultValue="Server location"
+              className=" bg-none h-[30px] w-[70px] text-sm font-inter font-normal capitalize text-white"
+            >
+              <option>Eng</option>
+              <option>Farsi</option>
+            </select>
+            <button>
+              <Link className="text-sm text-white font-inter font-normal capitalize ">
+                Faqs
+              </Link>
+            </button>
+            <button>
+              <Link className="flex items-center gap-1 text-sm text-white font-inter font-normal capitalize">
+                <Info size={16} />
+                Need help
+              </Link>
+            </button>
+
+            {/* <button>
+              <Link className="flex items-center text-sm text-white font-inter font-normal capitalize ">
+                <Info />
+                need help
+              </Link>
+            </button> */}
+          </div>
+        </div>
+      </div>
+      {/* navbar middle */}
+      <div className="navbar middle flex items-center justify-between">
+        <div className="lg:container">
+          <div className="logo_wrapper">
+            <Link
+              to="/"
+              className="text-3xl text-black font-inter font-medium capitalize flex items-center gap-2"
+            ></Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Navbar;

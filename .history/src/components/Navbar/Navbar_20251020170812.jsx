@@ -1,0 +1,29 @@
+import { Armchair, Check } from "lucide-react";
+import { Link } from "lucide-react";
+
+const Navbar = () => {
+  return (
+    <div>
+      <div className="navbar_top flex items-center justify-center bg-[#272343] w-full h-[45px]">
+        <div className="lg:container">
+          <p className="flex items-center gap-2 text-sm font-inter font-normal text-white capitalize">
+            <Check />
+            Free on all orders over $50
+          </p>
+          <div className="navbar_top_right">
+            <select
+              defaultValue="Server location"
+              className="select select-neutral bg-none h-[17px] w-[30px]"
+            >
+              <option disabled={true}>eng</option>
+              <option>North America</option>
+              <option>EU west</option>
+              <option>South East Asia</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Navbar;

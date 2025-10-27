@@ -1,0 +1,16 @@
+import SectionTitle from "../SectionTitle/SectionTitle";
+
+const Product = () => {
+  return (
+    <div className="lg:container mx-auto">
+      <div className="flex items-center justify-center">
+        <SectionTitle
+          title={"our Product"}
+          textAlign={"center"}
+          mb={"mb-5"}
+        ></SectionTitle>
+      </div>
+    </div>
+  );
+};
+export default Product;

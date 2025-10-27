@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* google font inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
+.banner_slide_item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7.5rem;
+}
+
+.banner_image {
+  position: relative;
+  /* width: 30%; */
+}
+.banner_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 747px;
+  width: 100%;
+  min-height: 747px;
+  height: 100%;
+  background-color: #e1e3e5;
+  /* background-color: #ele3e5;  */
+  border-radius: 100%;
+  z-index: -1;
+}
